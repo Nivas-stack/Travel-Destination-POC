@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Explore Travels</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f7fc;
+      font-family: 'Roboto', sans-serif;
+      border: 8px solid #0a4275;
+      border-radius: 12px;
+      margin: 20px;
+      padding: 10px;
+    }
+    .navbar {
+      background-color: #0a4275 !important;
+    }
+    .navbar-brand, .nav-link, .dropdown-toggle {
+      color: white !important;
+      font-weight: 600;
+      font-family: 'Roboto', sans-serif;
+    }
+    .navbar-brand {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8rem;
+    }
+    .hero {
+      background-image: url("https://wallpaperaccess.com/full/1318313.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 70px;
+      color: rgb(2, 2, 53);
+      font-family: 'Playfair Display', serif;
+    }
+    .lead {
+      font-size: 40px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      font-family:'Playfair Display', serif;
+      padding-left:28px;
+    }
+    .destination-img {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
+    .carousel-inner img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      max-height: 600px;
+      display: block;
+      margin: 0 auto;
+    }
+    section {
+      padding: 10px 0;
+    }
+    h2 {
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+    }
+    form .form-control {
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      font-family: 'Roboto', sans-serif;
+    }
+    form .form-control:focus {
+      border-color: #0a4275;
+      box-shadow: 0 0 8px rgba(10, 66, 117, 0.5);
+    }
+    footer {
+      background-color: #0a4275;
+      color: rgb(255, 255, 255);
+      padding: 20px 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar section -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="Logo">
+      Explore Travels
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Destinations</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#bengaluru">Bengaluru</a></li>
+            <li><a class="dropdown-item" href="#mysuru">Mysuru</a></li>
+            <li><a class="dropdown-item" href="#mumbai">Mumbai</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+  <div>
+    <h1>Explore The World With Us</h1>
+    <p class="lead">Your Adventure Starts Here</p>
+    <a href="#packages" class="btn btn-primary btn-lg">View Packages</a>
+  </div>
+</div>
+
+<!-- Gallery Carousel -->
+<section id="gallery">
+  <div class="container">
+    <h2 class="text-center">Gallery</h2>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner rounded shadow-sm">
+        <div class="carousel-item active">
+          <img src="https://thedigitaltoday.com/wp-content/uploads/2024/11/1-2-2-scaled.webp" class="d-block w-100 img-fluid" alt="Bengaluru">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.holidify.com/images/bgImages/MYSORE.jpg" class="d-block w-100 img-fluid" alt="Mysuru">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.visittnt.com/blog/wp-content/uploads/2019/07/mumbai-attractions.jpg" class="d-block w-100 img-fluid" alt="Mumbai">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Destinations -->
+<section id="packages">
+  <div class="container">
+    <h2 class="text-center">Popular Destinations</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" id="bengaluru">
+        <div class="card">
+          <img src="https://thedigitaltoday.com/wp-content/uploads/2024/11/1-2-2-scaled.webp" class="card-img-top destination-img" alt="Bengaluru">
+          <div class="card-body">
+            <h5 class="card-title">Bengaluru</h5>
+            <p class="card-text">The Garden City with vibrant tech hubs and culture.</p>
+            <a href="#" class="btn btn-outline-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col" id="mysuru">
+        <div class="card">
+          <img src="https://www.holidify.com/images/cmsuploads/compressed/attr_1568_20191102174918.jpg" class="card-img-top destination-img" alt="Mysuru">
+          <div class="card-body">
+            <h5 class="card-title">Mysuru</h5>
+            <p class="card-text">Heritage city known for the Mysore Palace and culture.</p>
+            <a href="#" class="btn btn-outline-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col" id="mumbai">
+        <div class="card">
+          <img src="https://preview.redd.it/ztr2qt1wu9p31.jpg?auto=webp&s=e3be9afee6d6447ad4ee186f7c8d3ee2c62a3f4a" class="card-img-top destination-img" alt="Mumbai">
+          <div class="card-body">
+            <h5 class="card-title">Mumbai</h5>
+            <p class="card-text">The City of Dreams, vibrant nightlife and sea views.</p>
+            <a href="#" class="btn btn-outline-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact">
+  <div class="container">
+    <h2 class="text-center">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center mt-4">
+  <div class="container">
+    <p>&copy; 2025 Explore Travels | Bengaluru, India | +91-963352XXXX | info@exploretravels.com</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
